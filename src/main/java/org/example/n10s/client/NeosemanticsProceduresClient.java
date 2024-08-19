@@ -2,8 +2,6 @@ package org.example.n10s.client;
 
 import lombok.RequiredArgsConstructor;
 import org.example.n10s.NeosemanticsProcedures;
-import org.neo4j.driver.Driver;
-import org.neo4j.driver.Record;
 import org.springframework.data.neo4j.core.Neo4jClient;
 import org.springframework.stereotype.Component;
 

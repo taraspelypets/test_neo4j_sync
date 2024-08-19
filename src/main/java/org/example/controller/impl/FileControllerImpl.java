@@ -1,6 +1,7 @@
 package org.example.controller.impl;
 
 import lombok.RequiredArgsConstructor;
+import org.example.controller.FileController;
 import org.example.service.StorageService;
 import org.springframework.core.io.Resource;
 import org.springframework.http.HttpHeaders;
@@ -14,10 +15,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @RequiredArgsConstructor
 @Controller
 @RequestMapping("files")
-public class FileController {
+public class FileControllerImpl implements FileController {
 
     private final StorageService storageService;
-
+    @Override
     @GetMapping("{filename}")
     @ResponseBody
     public ResponseEntity<Resource> serve(@PathVariable String filename) {

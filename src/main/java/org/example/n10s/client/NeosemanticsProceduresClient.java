@@ -28,7 +28,7 @@ public class NeosemanticsProceduresClient implements NeosemanticsProcedures {
     }
 
     private static final String IMPORT_INLINE_QUERY= """
-        CALL n10s.rdf.import.inline("$inlineRDF","$format",$params);
+        CALL n10s.rdf.import.inline($inlineRDF,$format,$params);
         """;
     @Override
     public Map<String, Object> importInline(String inlineRDF, String format, Map<String, Object> optionalParams){
@@ -42,7 +42,7 @@ public class NeosemanticsProceduresClient implements NeosemanticsProcedures {
     }
 
     private static final String DELETE_FETCH_QUERY= """
-        CALL n10s.rdf.delete.fetch("$url","$format",$params);
+        CALL n10s.rdf.delete.fetch($url,$format,$params);
         """;
     @Override
     public Map<String, Object> deleteFetch(String url, String format, Map<String, Object> optionalParams){
@@ -56,7 +56,7 @@ public class NeosemanticsProceduresClient implements NeosemanticsProcedures {
     }
 
     private static final String DELETE_INLINE_QUERY= """
-        CALL n10s.rdf.delete.inline("$inlineRDF","$format",$params);
+        CALL n10s.rdf.delete.inline($inlineRDF,$format,$params);
         """;
     @Override
     public Map<String, Object> deleteInline(String inlineRDF, String format, Map<String, Object> optionalParams){
